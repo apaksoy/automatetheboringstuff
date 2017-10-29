@@ -39,7 +39,7 @@ def print_usage():
                python3 mcbd.py delete - deletes all keywords.
         '''))
 
-mcbShelf = shelve.open('mcb')
+mcbShelf = shelve.open('mcb') # file created if not already existing
 
 # save or delete specified keywords
 if len(sys.argv) == 3:
