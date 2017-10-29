@@ -45,16 +45,21 @@ mcbShelf = shelve.open('mcb')
 if len(sys.argv) == 3:
     if sys.argv[1].lower() == 'save':
         mcbShelf[sys.argv[2]] = pyperclip.paste()
+        print('clipboard saved under keyword:', sys.argv[2])
     elif sys.argv[1].lower() == 'delete':
         del mcbShelf[sys.argv[2]]
+        print('deleted keyword:', sys.argv[2])
 # list or delete all keywords or fetch one
 elif len(sys.argv) == 2:
     if sys.argv[1].lower() == 'list':
         pyperclip.copy(str(list(mcbShelf.keys())))
+        print('all keywords copied to clipboard')
     elif sys.argv[1].lower() == 'delete':
         mcbShelf.clear()
+        print('all keywords deleted')
     elif sys.argv[1] in mcbShelf:
         pyperclip.copy(mcbShelf[sys.argv[1]])
+        print('copied to clipboard for keyword:', sys.argv[1])
     else:
         print('no such keyword:', sys.argv[1])
         print_usage()
@@ -63,3 +68,6 @@ else:
 
 
 mcbShelf.close()
+
+
+
