@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 #  This program copies all specified types of files under a specified
-#  directory to a new folder
+#  folder to a new folder
 '''
 Write a program that walks through a folder tree and searches for files
 with a certain file extension (such as .pdf or .jpg). Copy these files
@@ -19,12 +19,15 @@ fileTypes = ('jpg', 'pdf')
 
 sourceFolder = './source'
 sourceFolder = os.path.abspath(sourceFolder)
+# folder name only, to print out
 simpleSourceFolder = re.search(r'/([\w .-]+)$', sourceFolder).group(1)
 
 targetFolder = './target'
 targetFolder = os.path.abspath(targetFolder)
-simpleTargetFolder = re.search(r'/([\w .-]+)$',targetFolder).group(1)
+# folder name only, to print out 
+simpleTargetFolder = re.search(r'/([\w .-]+)$',targetFolder).group(1) 
 
+# Tell user the program has started and what it will be doing
 if os.path.exists(sourceFolder):
     print('Will copy file types:\n')
     for fileType in fileTypes:
