@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 #  This program copies all specified types of files under a specified
-#  folder to a new folder
+#  folder to a new folder. Both folders specified within the program.
 '''
 Write a program that walks through a folder tree and searches for files
 with a certain file extension (such as .pdf or .jpg). Copy these files
