@@ -7,8 +7,8 @@ the bugs that keep the program from working correctly.
 '''
 
 import random, logging
-logging.basicConfig(level=logging.WARNING, format=' %(asctime)s - %(levelname)s %(message)s')
-logging.disable(logging.CRITICAL) # Disables all messages at the critical level or lower.
+logging.basicConfig(level=logging.DEBUG, format=' %(asctime)s - %(levelname)s %(message)s')
+# logging.disable(logging.CRITICAL) # Disables all messages at the critical level or lower.
 
 def convert (number):
     assert number == 0 or number == 1, 'Toss should be 1 or 0!!!'
@@ -41,4 +41,3 @@ else:
        print('You got it!')
     else:
         print('Nope. You are really bad at this game.')
-
