@@ -5,7 +5,10 @@
     spam004.txt. It then renames all the latter files to fill
     the gap. """
 
-import os, sys, shutil, re
+import os
+import re
+import shutil
+import sys
 
 sourceFolder = './source'
 sourceFolder = os.path.abspath(sourceFolder)
