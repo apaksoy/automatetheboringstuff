@@ -5,5 +5,5 @@ If you need the public in-course material or the programs or the files used in t
 visit the [website](https://automatetheboringstuff.com/) associated with the book.
 
 Pls note that programs here are developed on Python 3 running on top of Darwin (mac OS).
-You may have to tweak them before running successfully especially if you download and
-try to run them on a non-Darwin computer.
+You may have to tweak some of them if you download and try to run them on especially a 
+non-Darwin computer.
