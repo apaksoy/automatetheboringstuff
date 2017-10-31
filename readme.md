@@ -1,4 +1,4 @@
-These files are Python projects completed by Alper Paksoy towards the practice projects assigned by chapter  in the "Automate the Boring Stuff with Python" book by Al Sweigart.
+These files are Python projects completed by me towards the practice projects assigned chapter by chapter in the "Automate the Boring Stuff with Python" book by Al Sweigart.
 
 If you need the public in-course material or the programs or the files used in the book, visit the [website](https://automatetheboringstuff.com/) associated with the book which is available there under a Creative Commons [license](https://creativecommons.org/licenses/by-nc-sa/3.0/legalcode).
 
