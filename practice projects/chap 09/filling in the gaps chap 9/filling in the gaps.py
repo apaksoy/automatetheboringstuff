@@ -1,9 +1,18 @@
-#! Python3
-""" This program finds all the files with a given prefix
-    in a specified folder and locates any gaps in numbering
-    such as spam003.txt in spam001.txt, spam002.txt and
-    spam004.txt. It then renames all the latter files to fill
-    the gap. """
+#!/usr/bin/env python3
+'''
+This program finds all the files with a given prefix
+in a specified folder and locates any gaps in numbering
+such as spam003.txt in spam001.txt, spam002.txt and
+spam004.txt. It then renames all the latter files to fill
+the gap.
+'''
+'''
+Write a program that finds all files with a given prefix, such as
+spam001.txt, spam002.txt, and so on, in a single folder and locates
+any gaps in the numbering (such as if there is a spam001.txt and
+spam003.txt but no spam002.txt). Have the program rename all the later
+files to close this gap.
+'''
 
 import os
 import re
