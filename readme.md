@@ -3,7 +3,7 @@ assigned by chapter  in the "Automate the Boring Stuff with Python" book by Al S
 
 If you need the public in-course material or the programs or the files used in the book, 
 visit the [website](https://automatetheboringstuff.com/) associated with the book which 
-is available under a Creative Commons [license](https://creativecommons.org/licenses/by-nc-sa/3.0/legalcode).
+is available there under a Creative Commons [license](https://creativecommons.org/licenses/by-nc-sa/3.0/legalcode).
 
 I have re-run all the programs provided in this repository before transferring them here 
 to make sure they are working properly to a large extent. However, they are developed 
