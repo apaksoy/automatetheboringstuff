@@ -1,4 +1,4 @@
-Last updated 1 November 2016.
+Last updated 1 November 2017.
 
 These files are Python projects so far completed by me towards the practice projects assigned on a chapter basis in the excellent book "Automate the Boring Stuff with Python" by Al Sweigart. Pls feel free to copy and compare them with your own solutions.  
 
