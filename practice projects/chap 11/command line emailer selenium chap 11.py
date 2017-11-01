@@ -2,7 +2,7 @@
 '''
 Logs into ... email web site with the provided
 username and password (in the "username" and "pwd" variables below)
-sends email with provided subject to the provided email address
+and sends email with provided subject to the provided email address
 from the command line
 Usage: cme e-address subject'
 "cme" is the alias for this program to run on my computer
