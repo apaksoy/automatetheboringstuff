@@ -1,4 +1,4 @@
-These files are Python projects completed by me towards the practice projects assigned on a chapter basis in the book "Automate the Boring Stuff with Python" by Al Sweigart. Pls feel free to copy and compare them with your own solutions.  
+These files are Python projects so far completed by me towards the practice projects assigned on a chapter basis in the book "Automate the Boring Stuff with Python" by Al Sweigart. Pls feel free to copy and compare them with your own solutions.  
 
 If you need the public in-course material or the programs or the files used in the book, visit the [website](https://automatetheboringstuff.com/) associated with the book which is available there under a Creative Commons [license](https://creativecommons.org/licenses/by-nc-sa/3.0/legalcode).
 
