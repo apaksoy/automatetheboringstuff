@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 '''
-This program randomly plays the 2048 game at
+This program randomly plays the 2048 game 15 times at
 https://gabrielecirulli.github.io/2048/'
 '''
 '''
@@ -45,14 +45,17 @@ browser.get('https://gabrielecirulli.github.io/2048/')
 gameElem = browser.find_element_by_class_name('game-container')
 gameElem.send_keys(Keys.UP)
 
-for i in range(15):
+nMoves = 15
+moveCount = 0
+for i in range(nMoves):
     key = random.choice(keyList)
     gameElem.send_keys(key)
+    moveCount += 1
     time.sleep(1)
 
 print('Moves completed!')
 gameElem = browser.find_element_by_class_name('best-container')
-print(f'Best score was {gameElem.text}.')
+print(f'Best score was {gameElem.text} at {moveCount} moves.')
 
 time.sleep(2)
 browser.quit()
