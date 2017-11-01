@@ -33,14 +33,14 @@ message = 'This message is sent using Selenium.'
 
 # check if information is provided
 if len(sys.argv) < 3:
-    print('Usage: supersm e-address subject')
+    print('Usage: cme e-address subject')
     sys.exit()
 
 # check if email address is proper
 emDiv = sys.argv[1].split('@')
 if len(emDiv) != 2 or emDiv[0] == '' or emDiv[1] == '': 
     print('Invalid e-mail address:', sys.argv[1])
-    print('Usage: supersm e-address subject')
+    print('Usage: cme e-address subject')
     sys.exit()
 
 toAddress = sys.argv[1]
