@@ -1,0 +1,68 @@
+#!/usr/bin/env python3
+'''
+Tries all the hyperlinks in a web page reports those raising an
+exception with the specified error code
+May require certain changes for other sites as currently tailored to
+inventwithpython.com web site
+'''
+'''
+Write a program that, given the URL of a web page, will attempt to
+download every linked page on the page. The program should flag any
+pages that have a 404 “Not Found” status code and print them out as
+broken links.
+'''
+
+import bs4
+import re
+import requests
+
+webPage = 'http://inventwithpython.com'
+errorCode = '404'
+res = requests.get(webPage)
+res.raise_for_status()
+
+soup = bs4.BeautifulSoup(res.text, 'html.parser')
+linkElems = soup.select('a')
+
+numError = 0
+for elem in linkElems:
+    url = elem.get('href')
+    if url.startswith('http'):
+        # print('first: ', url)
+        try:
+            res = requests.get(url, timeout = 1)
+            res.raise_for_status()
+        except Exception as exc:
+            if errorCode in str(exc.args[0]):
+                print(f'\nThere was a problem: {exc}\n\ncontinuing'\
+                      ' with next url')
+                numError += 1
+    elif url.startswith('//'):
+        # print('second:', 'http:' + url)
+        try:
+            res = requests.get('http:' + url, timeout = 1)
+            res.raise_for_status()
+        except Exception as exc:
+            if errorCode in str(exc.args[0]):          
+                print(f'\nThere was a problem: {exc}\n\ncontinuing'\
+                      ' with next url')
+                numError += 1
+    else:
+        # print('third: ', 'inventwithpython.com/'\
+        #                    + re.search(r'^/*(.*)', url).group(1))
+        try:
+            res = requests.get('http://inventwithpython.com/'\
+                               + re.search(r'^/*(.*)', url).group(1)\
+                               , timeout = 1)
+            res.raise_for_status()
+        except Exception as exc:
+            if errorCode in str(exc.args[0]):
+                print(f'\nThere was a problem: {exc}\n\ncontinuing'\
+                  ' with next url')
+                numError += 1
+
+    
+
+print('finished')
+print(f'{len(linkElems)} hyperlinks scanned from "{webPage}"')
+print(f'{numError} errors of type "{errorCode}" found')
