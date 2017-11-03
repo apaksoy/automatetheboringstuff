@@ -17,7 +17,7 @@ import openpyxl
 import sys
 
 def usage (number):
-    return print(f'usage: python3 "multiplication table maker.py" <number less than {number}>')
+    return print(f'usage: multiplicationTableMaker <number less than {number}>')
     
 maxNumber = 100
 filename = 'multiplication table.xlsx'
