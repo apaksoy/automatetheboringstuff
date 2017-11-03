@@ -47,7 +47,7 @@ def pec(msg='press Enter to continue or "q" to quit'):
 
 # check if information is provided
 if len(sys.argv) < 3:
-    print('Usage: imgur.py <folder_name> <keyword(s)>')
+    print('Usage: imgur <folder_name> <keyword(s)>')
     sys.exit()
 
 folderName = sys.argv[1]
