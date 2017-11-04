@@ -1,0 +1,6 @@
+This is the first line of a text file.
+This is the second line of a text file.
+Yet more line in this file
+
+This is the line after an empty line.
+Best line is the last line.
