@@ -19,14 +19,17 @@ def usage ():
     return print('usage: python3 "blank line inserter.py" '\
                  '<insertion_line_number> <number_of_lines> <file_name>')
 
+# check if enough number of arguments provided at the command line
 if len(sys.argv) < 4:
     usage()
     sys.exit()
 
+# pass arguments to relevant variables
 inNumber = int(sys.argv[1])
 noInsert = int(sys.argv[2])
 fname = sys.argv[3]
 
+# check if provided filename to open makes sense
 try:
     mo = re.search(r'([\w_-]+)\.(xlsx)$', fname, re.I)
     firstName, lastName = mo.group(1), mo.group(2)
@@ -37,6 +40,7 @@ except Exception:
 wb = openpyxl.load_workbook(filename=fname)
 sheet = wb.active
 
+# check if insertion line number makes sense 
 if sheet.max_row <= inNumber:
     print('No insertion necessary')
     print(f'Insertion line number {inNumber} greater than existing '\
@@ -44,6 +48,7 @@ if sheet.max_row <= inNumber:
     usage()
     sys.exit()
 
+# move cells to new places starting with the last row
 for i in range(sheet.max_row, inNumber - 1, -1):
     for j in range(1, sheet.max_column + 1):
         sheet.cell(row = i + noInsert, column = j).value\
