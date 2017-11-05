@@ -22,7 +22,7 @@ cSize = sheet.max_column
 # beforehand
 tableList = []
 
-# store table to list and emply the cells
+# store table to list and empty the cells
 for i in range(1, rSize + 1):
     tableList.append([])
     for j in range(1, cSize + 1):
