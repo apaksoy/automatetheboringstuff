@@ -21,8 +21,6 @@ for fileCounter, name in enumerate(fileNameList):
     txtfileObj = open(name, encoding='utf-8') 
     lines = txtfileObj.readlines()
     for lineCounter, line in enumerate(lines):
-        sheet.cell(row=fileCounter + 1, column=lineCounter + 1).value = line
+        sheet.cell(row=lineCounter + 1, column=fileCounter + 1).value = line
 
 wb.save('TexttoSpreadsheet.xlsx')
-    
-    
