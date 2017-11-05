@@ -15,14 +15,18 @@ sheet = wb.active
 # get size of table to be inverted
 rSize = sheet.max_row
 cSize = sheet.max_column
-# generate list to store table temporarily
-tableList = [[''] * cSize for i in range(rSize)]
 
+# generate list to store table temporarily
+# tableList = [[''] * cSize for i in range(rSize)]
+# found a way to get a 2-d list without having to declare its size
+# beforehand
+tableList = []
 
 # store table to list and emply the cells
 for i in range(1, rSize + 1):
+    tableList.append([])
     for j in range(1, cSize + 1):
-        tableList[i - 1][j - 1] = sheet.cell(row=i, column=j).value
+        tableList[i - 1].append(sheet.cell(row=i, column=j).value)
         sheet.cell(row=i, column=j).value = ''
         
 # write table to cells as transposed         
