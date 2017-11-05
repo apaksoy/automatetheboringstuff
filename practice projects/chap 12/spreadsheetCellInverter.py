@@ -8,7 +8,7 @@ spreadsheet.
 
 import openpyxl
 
-fname = "toBeInverted.xlsx"
+fname = "toBeCellInverted.xlsx"
 wb = openpyxl.load_workbook(fname)
 sheet = wb.active
 
