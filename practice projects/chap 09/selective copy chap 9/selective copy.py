@@ -48,12 +48,15 @@ else:
 # and paste them to the target directory
 count = 0
 for foldername, subfolders, filenames in os.walk(sourceFolder):
-    print('\nCopying specified file types in "%s"...' % (os.path.basename(foldername)))
+    print('\nCopying specified file types in "%s"...' \
+          % (os.path.basename(foldername)))
     for filename in filenames:
         for fileType in fileTypes:
             if filename.endswith('.' + fileType):
-                # print('%s\nto\n%s' % (os.path.join(foldername, filename) , targetFolder)) # dry run
-                print(shutil.copy(os.path.join(foldername, filename), targetFolder))
+                # print('%s\nto\n%s' % (os.path.join(foldername\
+                #, filename) , targetFolder)) # dry run
+                print(shutil.copy(os.path.join(foldername, filename)\
+                                  , targetFolder))
                 count += 1
 
 print('\nDone. %s files copied.' %(count))
