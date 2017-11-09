@@ -26,7 +26,7 @@ simpleSourceFolder = re.search(r'/([\w .-]+)$', sourceFolder).group(1)
 
 # Tell user the program has started and what it will be doing
 if os.path.exists(sourceFolder):
-    print(f'Encrypting PDF files in "{simpleSourceFolder}"'\
+    print(f'Encrypting PDF files in "{simpleSourceFolder}"'
           'and below \n')
 else:
     print(f'Source folder "{simpleSourceFolder}" does not exist.')
@@ -60,7 +60,7 @@ for foldername, subfolders, filenames in os.walk(sourceFolder):
                 # test encryption
                 pdfReader = PyPDF2.\
                     PdfFileReader(open(os.path.join(
-                            foldername, newFilename), 'rb'))
+                    foldername, newFilename), 'rb'))
                 if pdfReader.isEncrypted:
                     if pdfReader.decrypt(pwd) == 1:
                         print(f'{newFilename} now encyrpted')
@@ -73,9 +73,9 @@ for foldername, subfolders, filenames in os.walk(sourceFolder):
                               f'{os.path.join(foldername,newFilename)}')
                 else:
                     print(f'{os.path.join(foldername, filename)}'
-                          f' could not be encrypted')
+                              f' could not be encrypted')
             else:
                 print(f'{os.path.join(foldername, filename)}'
-                      f' already encrypted')
+                          f' already encrypted')
 
 print(f'\nDone. {count} files encrypted with password "{pwd}".')
