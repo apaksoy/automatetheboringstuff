@@ -19,6 +19,16 @@ from send2trash import send2trash
 fileType = 'pdf'
 pwd = 'nelson'
 
+def pec(msg='press Enter to continue or "q" to quit'):
+    '''prints the provided message and 
+    returns the character entered
+    '''
+    ch = ''
+    while ch == '':
+        print(msg)
+        ch = sys.stdin.read(1)
+    return ch
+
 sourceFolder = '.'
 sourceFolder = os.path.abspath(sourceFolder)
 # folder name only, to print out
@@ -26,8 +36,12 @@ simpleSourceFolder = re.search(r'/([\w .-]+)$', sourceFolder).group(1)
 
 # Tell user the program has started and what it will be doing
 if os.path.exists(sourceFolder):
-    print(f'Encrypting PDF files in "{simpleSourceFolder}"'
-          'and below \n')
+    msg = f'Will encrypt PDF files in "{simpleSourceFolder}"' +\
+            ' and below\nand remove those unencrypted if' +\
+            ' successfully encrypted.\npress Enter to continue or' +\
+            ' "q" to quit'
+    if pec(msg) == 'q':
+        sys.exit() 
 else:
     print(f'Source folder "{simpleSourceFolder}" does not exist.')
     sys.exit()
@@ -57,7 +71,7 @@ for foldername, subfolders, filenames in os.walk(sourceFolder):
                 pdfWriter.write(resPdf)
                 resPdf.close()  # close merged object
 
-                # test encryption
+                # test encryption and password
                 pdfReader = PyPDF2.\
                     PdfFileReader(open(os.path.join(
                     foldername, newFilename), 'rb'))
