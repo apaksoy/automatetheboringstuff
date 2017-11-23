@@ -42,9 +42,11 @@ if pdfReader.isEncrypted == 1:
             pdfWriter.write(resPdf)
             resPdf.close()  # close merged object
             pdfFileObj.close()
+            dictFile.close()
             print(f'"{pdfFilename}" is decrypted via the password '
                     f'"{word}" and saved as "{newPdfFilename}"')
             break
     else:
         pdfFileObj.close()
+        dictFile.close()
         print(f'{pdfFilename} could not be decrypted')
