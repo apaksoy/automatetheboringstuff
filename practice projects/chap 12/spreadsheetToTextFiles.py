@@ -20,8 +20,8 @@ for i in range(1, sheet.max_column + 1):
     txtfileObj.close()
 
 
-### this is another solution to the empty cells issue
-### returns index for the last non-empty cell 
+### This is another solution to the empty cells issue
+### Returns index for the last non-empty cell 
 ### in a Worksheet object created via openpyxl module
 ##def get_size(wObj):
 ##    for counter, cell in enumerate(wObj):
