@@ -8,7 +8,8 @@ another text file, and so on.
 
 import openpyxl
 
-wb = openpyxl.load_workbook('SpreadsheettoText.xlsx')
+# read_only = True is not to get the warning message
+wb = openpyxl.load_workbook('SpreadsheettoText.xlsx', read_only = True)
 sheet = wb.active
 
 for i in range(1, sheet.max_column + 1):
