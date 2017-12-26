@@ -18,7 +18,7 @@ in the .plist file along with the script does not work.
 
 Absolute path to the script also needs to be provided in the property list file. Making it executable and defining its location as a PATH in the .bash_profile file does not work withut the absolute path even when it has the absolute path to the interpreter at the top of the script file.
 
-The following lines can replace the two lines about the timing and run the script at 5:45 am every day. One needs to use the 24-hour time notation to describe the pm times.
+The following XML code can replace the two lines about the timing and run the script at 5:45 am every day. One needs to use the 24-hour time notation to describe the pm times.
 
 	<key>StartCalendarInterval</key>
 	<dict>
