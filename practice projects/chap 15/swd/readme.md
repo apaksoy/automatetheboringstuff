@@ -2,7 +2,7 @@ The xkcd.plist file is to run scheduledWebDownloader.py on a regular basis on ma
 
 The xkcd.plist file was placed under /Users/Alper/Library/launchagents directory. It ran the swd.py script every 15 seconds.
 
-The StandardErrorPath and StandardOutPath keys are very nice to have. Otherwise, error messages caused by the script and the messages the script are supported to print out to the screen during its normal interpretation can not be seen by any means. 
+The StandardErrorPath and StandardOutPath keys are very nice to have. Otherwise, error messages caused by the script and the messages the script are supposed to print out to the screen during its normal interpretation can not be seen by any means. 
 
 The label key is necessary but it need not have the same name with the .plist file as some on Stack OverFlow claim.
 
