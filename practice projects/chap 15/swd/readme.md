@@ -2,7 +2,7 @@ This readme is all about the xkcd.plist property list file and its contents unle
 
 The xkcd.plist file was initially placed under /Users/Alper/Library/launchagents directory but then it was placed in the same folder with the Python script and that also worked perfectly well. The property list file ran the scheduledWebDownloader.py script every 15 seconds. You can give the property list file any name you like but its extension has to be "plist".
 
-The StandardErrorPath and StandardOutPath keys are very nice to have in the property list file. Otherwise, error messages caused by the script and the messages the script are supposed to print out to the screen during its normal interpretation would be missed out. 
+The StandardErrorPath and StandardOutPath keys are very useful to have in the property list file. Otherwise, error messages caused by the script and the messages the script are supposed to print out to the screen during its normal interpretation would be missed out. 
 
 The label key is necessary but it need not have the same name with the .plist file as some on Stack OverFlow claim.
 
