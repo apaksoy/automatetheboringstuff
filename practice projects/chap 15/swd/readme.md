@@ -1,6 +1,6 @@
-This readme is all about the xkcd.plist file (name does not matter, but the extension does) and its contents unless stated otherwise. It was used to run scheduledWebDownloader.py on a regular basis via launchctl (a variant of launchcd) on mac OS.
+This readme is all about the xkcd.plist property list file and its contents unless stated otherwise. It was used to run scheduledWebDownloader.py on a regular basis via launchctl (a variant of launchcd) on mac OS.
 
-The xkcd.plist file was initially placed under /Users/Alper/Library/launchagents directory but then it was placed under the same directory with the script and that also worked perfectly well. The .plist file ran the swd.py script every 15 seconds.
+The xkcd.plist file was initially placed under /Users/Alper/Library/launchagents directory but then it was placed under the same directory with the script and that also worked perfectly well. The .plist file ran the swd.py script every 15 seconds. You can give the property list file any name you like but its extension has to be "plist".
 
 The StandardErrorPath and StandardOutPath keys are very nice to have. Otherwise, error messages caused by the script and the messages the script are supposed to print out to the screen during its normal interpretation can not be seen by any means. 
 
