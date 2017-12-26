@@ -8,11 +8,11 @@ The label key is necessary but it need not have the same name with the .plist fi
 
 Unfortunately, the absolute path for the Python interpreter has to be provided either in the ProgramArguments key or at the top of the script file as a shebang line. Having the relative path
 
-#!/usr/bin/env python3
+	#!/usr/bin/env python3
 
 at the top of the script file or just 
 
-<string>python3</string>
+	<string>python3</string>
 
 in the .plist file along with the script does not work. 
 
@@ -30,7 +30,7 @@ The following lines can replace the two lines about timing above to run the scri
 
 Use the following terminal commands to load and unload the .plist from the “launch agents” directory.
 
-launchctl load xkcd.plist
-launchctl unload xkcd.plist
+	launchctl load xkcd.plist
+	launchctl unload xkcd.plist
 
 Also check the specified .err and .out files to see if the program is running nicely. For some “errors”, even those files may not show anything. You could understand that there is something amiss by observing that the script is not doing it is supposed to do by things not happening, i.e. files downloaded, as they should.  
