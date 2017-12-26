@@ -1,4 +1,4 @@
-The xkcd.plist file (name does not matter, but the extension does) runs scheduledWebDownloader.py on a regular basis on mac OS 
+This readme is all about the xkcd.plist file (name does not matter, but the extension does) and its contents. It was used to run scheduledWebDownloader.py on a regular basis via launchctl (a variant of launchcd) on mac OS.
 
 The xkcd.plist file was initially placed under /Users/Alper/Library/launchagents directory but then it was placed under the same directory with the script and that also worked perfectly well. The .plist file ran the swd.py script every 15 seconds.
 
