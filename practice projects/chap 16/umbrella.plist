@@ -1,3 +1,4 @@
+<!-- This .plist file enables the "umbrella_reminder.py" pyhthon script to run every morning at 6 am as long as I am logged in to my iMac. -->
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
