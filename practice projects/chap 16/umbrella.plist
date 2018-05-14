@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+        <key>Label</key>
+        <string>swd</string>
+
+        <key>ProgramArguments</key>
+        <array>
+                <string>/Library/Frameworks/Python.framework/Versions/3.6/bin/python3</string>
+                <string>/Users/Alper/Library/Mobile Documents/com~apple~CloudDocs/documents/python/Automate the boring stuff/quizzes/practice projects/chap 16/umbrella_reminder.py</string>
+        </array>
+
+        <key>StartCalendarInterval</key>
+        <dict>
+                <key>Hour</key>
+                <integer>6</integer>
+                <key>Minute</key>
+                <integer>0</integer>
+        </dict>
+
+        <key>StandardErrorPath</key>
+        <string>/tmp/WeTest1.err</string>
+
+        <key>StandardOutPath</key>
+        <string>/tmp/WeTest1.out</string>
+</dict>
+</plist>
