@@ -47,7 +47,8 @@ soup = bs4.BeautifulSoup(html, 'lxml')
 # Get day of the week
 elems_day = soup.select('div.tahminTarih.ng-binding')
 
-# Get city and district
+# Get city and district names in order to make sure query  
+# returned correct results.
 elems_il = soup.select('ziko.ng-binding')
 # The weather forecasts at MGM's site is per city and district ("ilce")
 # but many district names in Turkish  have non-ascii characters.
