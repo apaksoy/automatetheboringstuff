@@ -42,7 +42,7 @@ url = 'https://www.mgm.gov.tr/?il=Istanbul'
 browser.get(url)
 html = browser.page_source
 
-soup = bs4.BeautifulSoup(html, 'lxml')
+soup = bs4.BeautifulSoup(html, 'html.parser')
 
 # Get day of the week
 elems_day = soup.select('div.tahminTarih.ng-binding')
