@@ -1,4 +1,4 @@
-Last updated 15 May 2018.
+Last updated: 15 May 2018.
 
 These are Python projects I completed so far towards the practice projects assigned in the excellent Python intro book "Automate the Boring Stuff with Python" by Al Sweigart. Pls feel free to copy and compare them with your own solutions.  
 
